@@ -1,0 +1,10 @@
+<h2>Add Weather Forecast</h2>
+<form (ngSubmit)="addForecast()">
+  <label for="date">Date:</label>
+  <input type="date" id="date" [(ngModel)]="forecast.date" name="date" required>
+  <label for="temperatureC">Temperature (C):</label>
+  <input type="number" id="temperatureC" [(ngModel)]="forecast.temperatureC" name="temperatureC" required>
+  <label for="summary">Summary:</label>
+  <input type="text" id="summary" [(ngModel)]="forecast.summary" name="summary" required>
+  <button type="submit">Add</button>
+</form>

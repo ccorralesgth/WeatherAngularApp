@@ -1,0 +1,21 @@
+<h2>Weather Forecasts</h2>
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Temperature (C)</th>
+    <th>Temperature (F)</th>
+    <th>Summary</th>
+    <th>Actions</th>
+  </tr>
+  <tr *ngFor="let forecast of weatherForecasts">
+    <td>{{ forecast.date }}</td>
+    <td>{{ forecast.temperatureC }}</td>
+    <td>{{ forecast.temperatureF }}</td>
+    <td>{{ forecast.summary }}</td>
+    <td>
+      <button (click)="editForecast(forecast.id)">Edit</button>
+      <button (click)="deleteForecast(forecast.id)">Delete</button>
+    </td>
+  </tr>
+</table>
+<button routerLink="/add">Add New Forecast</button>
